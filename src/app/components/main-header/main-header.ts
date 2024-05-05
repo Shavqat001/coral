@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DataService } from '../service';
+import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'main-header',
@@ -8,30 +7,31 @@ import { DataService } from '../service';
 })
 
 export class MainHeader {
-  value: number = 0;
+  count = localStorage.getItem('count')
+  @ViewChild('modal') modal!: ElementRef;
+  
+  selected = JSON.parse(localStorage.getItem('selected') || '{}');
 
-  constructor(private dataService: DataService) { }
-
-  ngOnInit() {
-    this.dataService.value$.subscribe(newValue => {
-      this.value = newValue;
-    });
-  }
+  constructor(private cdr: ChangeDetectorRef) {}
 
   show() {
-    const selected = JSON.parse(localStorage.getItem('selected') || '{}');
-    console.log(selected);
-    
+    this.modal.nativeElement.style.display = 'block';
+    this.cdr.detectChanges();
+  }
+
+  closeModal() {
+    this.modal.nativeElement.style.display = 'none';
+    this.cdr.detectChanges();
   }
 
   searchIcon: string = '/assets/img/search.svg';
   isHidden: boolean = true;
+
   searchClick = () => {
     if (this.isHidden) {
       this.isHidden = false
     } else {
       this.isHidden = true
     }
-    console.log(this.isHidden);
   }
 }

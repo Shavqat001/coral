@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DataService } from '../service';
 
 @Component({
   selector: 'products',
@@ -8,24 +7,18 @@ import { DataService } from '../service';
 })
 
 export class Products {
-  constructor(private dataService: DataService) { }
+  buyCount = parseInt(localStorage.getItem('count') || '0');
 
-  buy = (product: object) => {
-    // Parse localStorage and handle cases where it's null or undefined
-    const selected: object[] = JSON.parse(localStorage.getItem('selected') || '[]');
-    console.log(selected);
-
-    // Ensure selectedProducts is an array by making a copy of selected
-    let selectedProducts: Array<object> = Array.isArray(selected) ? [...selected] : [];
-    console.log(selectedProducts);
-
+  buy = (product: any) => {
+    this.buyCount++;
+    const selected: any[] = JSON.parse(localStorage.getItem('selected') || '[]');
+    let selectedProducts: any[] = Array.isArray(selected) ? [...selected] : [];
     selectedProducts.push(product);
-    console.log(selectedProducts);
-
     localStorage.setItem('selected', JSON.stringify(selectedProducts));
-
-    this.dataService.incrementValue();
+    localStorage.setItem('count', JSON.stringify(this.buyCount));
   }
+
+
 
   productList = [
     {
