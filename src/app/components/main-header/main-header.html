@@ -1,0 +1,56 @@
+<header class="main-header">
+    <div class="wrapper">
+      <div class="main-header__top-side">
+        <div class="main-header__search" (click)="searchClick()">
+          <img src="{{searchIcon}}" alt="">
+          <input type="text" hidden>
+        </div>
+  
+        <a class="main-logo" href="/">CORAL</a>
+  
+        <ul class="main-header__menu">
+          <li class="main-header__option">
+            <a href="">
+              <img src="../assets/img/avatar.svg" alt="">
+              <span>Account</span>
+            </a>
+          </li>
+          <li class="main-header__option" (click)="show()">
+            <a href="">
+              <img src="../assets/img/shop.svg" alt="">
+              <span>Shopping</span>
+            </a>
+            <span class="shop-count">{{value}}</span>
+          </li>
+        </ul>
+      </div>
+  
+      <hr />
+  
+      <nav class="main-header__navigation">
+        <ul class="main-header__list">
+          <li class="main-header__item">
+            <a href="">Jewelry & Accessories</a>
+          </li>
+          <li class="main-header__item">
+            <a href="">Clothing & Shoes</a>
+          </li>
+          <li class="main-header__item">
+            <a href="">Home & Living</a>
+          </li>
+          <li class="main-header__item">
+            <a href="">Wedding & Party</a>
+          </li>
+          <li class="main-header__item">
+            <a href="">Toys & Entertainment</a>
+          </li>
+          <li class="main-header__item">
+            <a href="">Art & Collectibles</a>
+          </li>
+          <li class="main-header__item">
+            <a href="">Craft Supplies & Tools</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>

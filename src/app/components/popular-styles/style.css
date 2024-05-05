@@ -1,0 +1,41 @@
+.popular-styles {
+    margin-bottom: 140px;
+    background-color: #fff;
+    padding-top: 90px;
+}
+
+.popular-styles__title {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.popular-styles__brands {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+
+.popular-styles__images {
+    display: flex;
+}
+
+.popular-styles__images div {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    height: 648px;
+}
+
+.popular-styles__images > div img:first-child {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+}

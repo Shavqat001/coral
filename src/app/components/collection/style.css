@@ -1,0 +1,38 @@
+.collection {
+    color: #fff;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 140px;
+}
+
+.collection .wrapper {
+    padding-top: 233px;
+    padding-bottom: 93px;
+    display: flex;
+    background-size: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+}
+
+.collection__title {
+    margin-bottom: 55px;
+}
+
+.collection__info {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 40px;
+    margin-bottom: 55px;
+    text-transform: capitalize;
+}
+
+.collection__button {
+    font-weight: 400;
+    font-size: 29px;
+    padding: 19px 26px;
+    background-color: #fff;
+    text-transform: capitalize;
+    border: none;
+}

@@ -1,0 +1,11 @@
+.modal-window {
+    padding: 20px;
+    background-color: #fff;
+    display: none;
+    
+    >ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+}

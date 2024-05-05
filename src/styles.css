@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --dark-blue: #1e2832;
+    --basic-tomato: #FF6F61;
+}
+
+@font-face {
+    font-family: 'amstelvar';
+    src: url('./assets/fonts/amstelvar.ttf');
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'renaissance';
+    src: url('/assets/fonts/renaissance.woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('/assets/fonts/roboto.woff');
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'renaissance',sans-serif;
+    transition: 50ms;
+}
+
+.wrapper {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.main-logo {
+    font-size: 28px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+    font-family: 'renaissance', sans-serif;
+}
+
+.main-logo::before,
+.main-logo::after {
+    content: '';
+    background: url('./assets/img/diamond.svg') 50%;
+    background-size: 100%;
+    width: 31px;
+    height: 15px;
+}
+
+.main-logo::before {
+    margin-right: 10px;
+}
+
+.main-logo::after {
+    margin-left: 10px;
+}
