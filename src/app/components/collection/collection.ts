@@ -17,7 +17,6 @@ export class Collection implements AfterViewInit {
       if (this.position > 9240) {
         this.position = 0;
       }
-      console.log(this.position);
       this.scrollToPosition();
     }, 3000);
   }

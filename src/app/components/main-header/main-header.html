@@ -18,7 +18,7 @@
         <li class="main-header__option" (click)="show()">
           <img src="../assets/img/shop.svg" alt="">
           <span>Shopping</span>
-          <span class="shop-count" #counter>{{count}}</span>
+          <span class="{{count ? 'shop-count' : ''}}" #counter>{{count?count:null}}</span>
         </li>
       </ul>
     </div>
@@ -39,7 +39,6 @@
       </ul>
     </div>
 
-    <div class="modal-layer" *ngIf="isShow"></div>
 
     <hr />
 
