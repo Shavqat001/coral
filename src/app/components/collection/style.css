@@ -1,19 +1,34 @@
 .collection {
     color: #fff;
-    background: #000;
     overflow: hidden;
     display: flex;
     margin-bottom: 140px;
+    background: #111;
 }
 
 .collection .wrapper {
-    padding-top: 233px;
-    padding-bottom: 93px;
     display: flex;
     background-size: 100%;
     align-items: center;
     justify-content: space-between;
-    background: #000;
+    overflow: hidden;
+}
+
+.collection .wrapper>div {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-width: 100%;
+    height: 100%;
+    background: url('/assets/img/background.png') 50%;
+    background-size: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.collection .wrapper>div * {
+    margin-right: 100px;
 }
 
 .collection__title {

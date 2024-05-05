@@ -1,37 +1,28 @@
-import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'main-header',
   templateUrl: './main-header.html',
-  styleUrl: './style.css'
+  styleUrls: ['./style.css']
 })
-
 export class MainHeader {
-  count = localStorage.getItem('count')
-  @ViewChild('modal') modal!: ElementRef;
-  
-  selected = JSON.parse(localStorage.getItem('selected') || '{}');
+  isShow = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  selected = JSON.parse(localStorage.getItem('selected') || '{}');
+  count = parseInt(localStorage.getItem('count') || '0');
 
   show() {
-    this.modal.nativeElement.style.display = 'block';
-    this.cdr.detectChanges();
+    this.isShow = true;
   }
 
   closeModal() {
-    this.modal.nativeElement.style.display = 'none';
-    this.cdr.detectChanges();
+    this.isShow = false;
   }
 
   searchIcon: string = '/assets/img/search.svg';
   isHidden: boolean = true;
 
   searchClick = () => {
-    if (this.isHidden) {
-      this.isHidden = false
-    } else {
-      this.isHidden = true
-    }
+    this.isHidden = !this.isHidden;
   }
 }
