@@ -10,7 +10,7 @@ import { DataService } from '../service';
 export class MainHeader {
   value: number = 0;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.dataService.value$.subscribe(newValue => {
@@ -19,8 +19,9 @@ export class MainHeader {
   }
 
   show() {
-    const modal: any = document.querySelector('.modal');
-    modal.classList.add = 'block';
+    const selected = JSON.parse(localStorage.getItem('selected') || '{}');
+    console.log(selected);
+    
   }
 
   searchIcon: string = '/assets/img/search.svg';

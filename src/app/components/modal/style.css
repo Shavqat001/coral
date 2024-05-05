@@ -1,11 +1,15 @@
 .modal-window {
     padding: 20px;
     background-color: #fff;
-    display: none;
-    
+    display: block;
+
     >ul {
         display: flex;
         flex-direction: column;
         list-style: none;
     }
+}
+
+.display-none {
+    display: none;
 }

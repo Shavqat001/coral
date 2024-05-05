@@ -8,10 +8,23 @@ import { DataService } from '../service';
 })
 
 export class Products {
-  constructor(private dataService: DataService) {} // Inject the shared service
+  constructor(private dataService: DataService) { }
 
-  buy = () => {
-    this.dataService.incrementValue(); 
+  buy = (product: object) => {
+    // Parse localStorage and handle cases where it's null or undefined
+    const selected: object[] = JSON.parse(localStorage.getItem('selected') || '[]');
+    console.log(selected);
+
+    // Ensure selectedProducts is an array by making a copy of selected
+    let selectedProducts: Array<object> = Array.isArray(selected) ? [...selected] : [];
+    console.log(selectedProducts);
+
+    selectedProducts.push(product);
+    console.log(selectedProducts);
+
+    localStorage.setItem('selected', JSON.stringify(selectedProducts));
+
+    this.dataService.incrementValue();
   }
 
   productList = [
