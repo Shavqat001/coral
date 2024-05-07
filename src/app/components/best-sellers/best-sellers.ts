@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class BestSellers {
-
+  filters(e: Event) {
+    console.log(e.target as HTMLElement)
+  }
 }

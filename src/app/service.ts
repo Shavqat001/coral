@@ -9,7 +9,7 @@ export class newService {
         {
             image: '/assets/img/joggers.png',
             title: 'Adicolor Classics Joggers',
-            type: 'Dress',
+            type: 'dress',
             price: 63.85,
             isSale: false,
             isHot: false,
@@ -18,7 +18,7 @@ export class newService {
         {
             image: '/assets/img/bag.png',
             title: 'Nike Sportswear Futura Luxe',
-            type: 'Bag',
+            type: 'bag',
             price: 130.00,
             isSale: false,
             isHot: false,
@@ -36,7 +36,7 @@ export class newService {
         {
             image: '/assets/img/yellow.png',
             title: 'Yellow Reserved Hoodie',
-            type: 'Dress',
+            type: 'dress',
             price: 364.00,
             oldPrice: 155.00,
             isSale: true,
@@ -46,7 +46,7 @@ export class newService {
         {
             image: '/assets/img/green.png',
             title: 'Basic Dress Green',
-            type: 'Dress',
+            type: 'dress',
             price: 236.00,
             isSale: false,
             isHot: false,
@@ -65,7 +65,7 @@ export class newService {
         {
             image: '/assets/img/nike.png',
             title: 'Nike Repel Miler',
-            type: 'Dress',
+            type: 'dress',
             price: 120.50,
             isSale: false,
             isHot: false,
@@ -74,7 +74,7 @@ export class newService {
         {
             image: '/assets/img/glasses.png',
             title: 'Nike Sportswear Futura Luxe',
-            type: 'Glasses',
+            type: 'gGlasses',
             price: 160.00,
             isSale: false,
             isHot: false,

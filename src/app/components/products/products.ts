@@ -14,4 +14,17 @@ export class Products {
     this.svc.increment();
     this.svc.add(product)
   }
+
+  filtering(event: Event) {
+    const target = event.target as HTMLElement;
+    const listItem = target.closest('.products__item');
+    const allItems = document.querySelectorAll('.products__item');
+    allItems.forEach(item => {
+      item.classList.remove('selected');
+    });
+    if (listItem) {
+      listItem.classList.add('selected');
+    }
+  }
+
 }

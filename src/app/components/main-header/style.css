@@ -90,7 +90,9 @@
 .modal {
     height: 600px;
     position: absolute;
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     left: 50%;
     transform: translate(-50%, 0);
     background-color: #eee;
@@ -98,9 +100,23 @@
     box-shadow: 0 0 40px -15px #111;
 }
 
+.modal>header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
 .modal__title {
+    margin-left: 50px;
     font-size: 35px;
-    margin: 0 50px 30px 0;
+    display: flex;
+    align-items: center;
 }
 
 .modal__list {
@@ -126,7 +142,7 @@
 .close-modal {
     width: 30px;
     height: 30px;
-    position: fixed;
+    position: sticky;
     top: 20px;
     right: 20px;
     cursor: pointer;
@@ -146,7 +162,7 @@
 .total-price {
     font-family: sans-serif;
     font-size: 30px;
-    position: absolute;
+    position: sticky;
     bottom: 0px;
     right: 0px;
     padding: 10px;

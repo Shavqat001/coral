@@ -24,24 +24,24 @@
     </div>
 
     <div class="modal" *ngIf="isShow">
-      <h2 class="modal__title">Корзина</h2>
-      <div class="close-modal" (click)="closeModal()"></div>
+      <header>
+        <h2 class="modal__title">Корзина</h2>
+        <div class="close-modal" (click)="closeModal()"></div>
+      </header>
       <ul class="modal__list">
         <li class="modal__item" *ngFor="let item of svc.selectedProducts">
           <img src="{{item.image}}" width="100" alt="">
           <div>
             <h3 class="modal__subtitles">{{item.title}}</h3>
             <div>
-              <span>{{item.price}}</span>
+              <span>${{item.price}}</span>
             </div>
           </div>
         </li>
       </ul>
 
       <span class="total-price">total price: ${{svc.totalPrice}}</span>
-
     </div>
-
 
     <hr />
 
