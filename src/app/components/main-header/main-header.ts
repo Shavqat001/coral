@@ -8,7 +8,7 @@ import { newService } from '../../service';
 })
 export class MainHeader {
   constructor(public svc: newService) { }
-
+  
   isShow = false;
 
   show() {
