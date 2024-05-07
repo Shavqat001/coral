@@ -17,7 +17,7 @@
         </header>
 
         <ul class="products__goods goods">
-            <li class="products__good " *ngFor="let product of productList">
+            <li class="products__good " *ngFor="let product of svc.productList">
                 <div class="goods__picture {{product.isSale ? 'products__good sale' : 'products__good' }}">
                     <img src="{{product.image}}" alt="{{product.title}}">
 

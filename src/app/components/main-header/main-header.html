@@ -18,7 +18,7 @@
         <li class="main-header__option" (click)="show()">
           <img src="../assets/img/shop.svg" alt="">
           <span>Shopping</span>
-          <span class="{{count ? 'shop-count' : ''}}" #counter>{{count?count:null}}</span>
+          <span class="{{svc.count ? 'shop-count' : ''}}" #counter>{{svc.count?svc.count:null}}</span>
         </li>
       </ul>
     </div>
@@ -27,7 +27,7 @@
       <h2 class="modal__title">Корзина</h2>
       <div class="close-modal" (click)="closeModal()"></div>
       <ul class="modal__list">
-        <li class="modal__item" *ngFor="let item of selected">
+        <li class="modal__item" *ngFor="let item of svc.selectedProducts">
           <img src="{{item.image}}" width="100" alt="">
           <div>
             <h3 class="modal__subtitles">{{item.title}}</h3>

@@ -13,6 +13,7 @@ import { Follow } from './components/follow/follow';
 import { AdditionalInformation } from './components/additional-information/additional-information';
 import { MainFooter } from './components/main-footer/main-footer';
 import { StoreModule } from '@ngrx/store';
+import { newService } from './service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { StoreModule } from '@ngrx/store';
     AppRoutingModule,
     StoreModule.forRoot({}, {})
   ],
-  providers: [],
+  providers: [newService],
   bootstrap: [AppComponent]
 })
 

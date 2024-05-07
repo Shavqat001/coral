@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { newService } from '../../service';
 
 @Component({
   selector: 'main-header',
@@ -6,10 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./style.css']
 })
 export class MainHeader {
-  isShow = false;
+  constructor(public svc: newService) { }
 
-  selected = JSON.parse(localStorage.getItem('selected') || '{}');
-  count = parseInt(localStorage.getItem('count') || '0');
+  isShow = false;
 
   show() {
     this.isShow = true;
