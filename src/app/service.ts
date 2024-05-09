@@ -10,9 +10,7 @@ export class newService {
     totalPrice: number = this.selectedProducts.reduce((prev, current) => prev + Number(current.price), 0);
 
     add(product: any) {
-        localStorage.setItem('count', JSON.stringify(this.selectedProducts.length));
         this.selectedProducts.push(product);
-
         localStorage.setItem('selected', JSON.stringify(this.selectedProducts));
         this.totalPrice = this.selectedProducts.reduce((prev, current) => prev + Number(current.price), 0);
     }
@@ -56,7 +54,7 @@ export class newService {
             title: 'Yellow Reserved Hoodie',
             type: 'dress',
             price: 364.00,
-            oldPrice: 155.00,
+            oldPrice: '$155.00',
             isSale: true,
             isHot: false,
         },
@@ -75,7 +73,7 @@ export class newService {
             title: 'Nike Air Zoom Pegasus',
             type: 'shoe',
             price: 220.00,
-            oldPrice: 198.00,
+            oldPrice: '$198.00',
             isSale: true,
             isHot: false,
         },
@@ -92,7 +90,7 @@ export class newService {
         {
             image: '/assets/img/glasses.png',
             title: 'Nike Sportswear Futura Luxe',
-            type: 'gGlasses',
+            type: 'Glasses',
             price: 160.00,
             isSale: false,
             isHot: false,

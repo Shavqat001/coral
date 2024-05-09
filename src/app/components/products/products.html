@@ -5,9 +5,11 @@
         <header class="products__header">
             <ul class="products__list" (click)="filtering($event)">
                 <li class="products__item selected">all products</li>
-                <li class="products__item">t-shirt</li>
-                <li class="products__item">hoodies</li>
-                <li class="products__item">jacket</li>
+                <li class="products__item">Dress</li>
+                <li class="products__item">Bag</li>
+                <li class="products__item">Shoe</li>
+                <li class="products__item">Glasses</li>
+                <li class="products__item">Scarf</li>
             </ul>
 
             <button class="products__button">
@@ -38,8 +40,8 @@
                 <div class="goods__bottom-side">
                     <span class="goods__type">{{ product.type }}</span>
                     <span class="goods__price">
-                        <s>{{product.oldPrice ? product.oldPrice : ''}}</s>
-                        <b>${{product.price }}</b>
+                        <s>{{product.oldPrice}}</s>
+                        <b>${{product.price}}</b>
                     </span>
                 </div>
             </li>

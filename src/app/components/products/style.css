@@ -29,14 +29,11 @@
     text-transform: capitalize;
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    padding: 5px 15px;
 }
 
 .products__item.selected {
     color: #000;
-}
-
-.products__item:not(:last-child) {
-    margin-right: 39px;
 }
 
 .products__button {
