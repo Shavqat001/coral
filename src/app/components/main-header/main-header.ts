@@ -8,7 +8,7 @@ import { newService } from '../../service';
 })
 export class MainHeader {
   constructor(public svc: newService) { }
-  
+
   isShow = false;
 
   show() {
@@ -21,6 +21,10 @@ export class MainHeader {
 
   searchIcon: string = '/assets/img/search.svg';
   isHidden: boolean = true;
+
+  clearBasket() {
+    this.svc.clear()
+  }
 
   searchClick = () => {
     this.isHidden = !this.isHidden;

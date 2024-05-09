@@ -5,6 +5,24 @@ import { Injectable } from "@angular/core";
 })
 
 export class newService {
+    selected: any[] = JSON.parse(localStorage.getItem('selected') || '[]');
+    selectedProducts: any[] = Array.isArray(this.selected) ? [...this.selected] : [];
+    totalPrice: number = this.selectedProducts.reduce((prev, current) => prev + Number(current.price), 0);
+
+    add(product: any) {
+        localStorage.setItem('count', JSON.stringify(this.selectedProducts.length));
+        this.selectedProducts.push(product);
+
+        localStorage.setItem('selected', JSON.stringify(this.selectedProducts));
+        this.totalPrice = this.selectedProducts.reduce((prev, current) => prev + Number(current.price), 0);
+    }
+
+    clear() {
+        this.selectedProducts = [];
+        this.totalPrice = this.selectedProducts.reduce((prev, current) => prev + Number(current.price), 0);
+        localStorage.setItem('selected', JSON.stringify(this.selectedProducts))
+    }
+
     productList = [
         {
             image: '/assets/img/joggers.png',
@@ -80,21 +98,4 @@ export class newService {
             isHot: false,
         },
     ]
-
-
-    count = JSON.parse(localStorage.getItem('count') || '0');
-    selected: any[] = JSON.parse(localStorage.getItem('selected') || '[]');
-    selectedProducts: any[] = Array.isArray(this.selected) ? [...this.selected] : [];
-    totalPrice: number = this.selectedProducts.reduce((prev, current) => prev + Number(current.price), 0);
-
-    increment() {
-        this.count++;
-        localStorage.setItem('count', this.count);
-    }
-
-    add(product: any) {
-        this.selectedProducts.push(product);
-        localStorage.setItem('selected', JSON.stringify(this.selectedProducts))
-        this.totalPrice = this.selectedProducts.reduce((prev, current) => prev + Number(current.price), 0);
-    }
 }

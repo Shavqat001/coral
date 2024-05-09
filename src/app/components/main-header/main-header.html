@@ -18,7 +18,7 @@
         <li class="main-header__option" (click)="show()">
           <img src="../assets/img/shop.svg" alt="">
           <span>Shopping</span>
-          <span class="{{svc.count ? 'shop-count' : ''}}" #counter>{{svc.count?svc.count:null}}</span>
+          <span class="{{svc.selectedProducts.length ? 'shop-count' : ''}}">{{svc.selectedProducts.length?svc.selectedProducts.length:null}}</span>
         </li>
       </ul>
     </div>
@@ -39,8 +39,10 @@
           </div>
         </li>
       </ul>
-
-      <span class="total-price">total price: ${{svc.totalPrice}}</span>
+      <footer>
+        <span class="clear-basket" (click)="clearBasket()">clear</span>
+        <span class="total-price">total price: ${{svc.totalPrice}}</span>
+      </footer>
     </div>
 
     <hr />

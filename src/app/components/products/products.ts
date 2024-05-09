@@ -11,7 +11,6 @@ export class Products {
   constructor(public svc: newService) { }
 
   buy = (product: any) => {
-    this.svc.increment();
     this.svc.add(product)
   }
 
@@ -26,5 +25,4 @@ export class Products {
       listItem.classList.add('selected');
     }
   }
-
 }
